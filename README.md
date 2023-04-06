@@ -1,6 +1,6 @@
 # RNA-Peptide-complexes_Contact-matrix
 
-This python script is designed to build a contact matrix of an RNA-peptide complex using gromacs mindist function. For this, you have make sure that every bash script is present in your working directory.
+This python script is designed to build a contact matrix of an RNA-peptide complex using gromacs mindist function. For this, you have to make sure that every bash script is present in your working directory.
 The scripts are : 
   --> Colum_NX_NY.sh 
   --> nucleicres.sh 
@@ -18,8 +18,8 @@ You will have to provide some information about the peptide and the RNA of the c
 - Name of the RNA
 - Number of peptide residues
 - Name of the peptide
-- PDB file of the RNA
-- PDB file of the peptide
+- PDB file of the RNA alone
+- PDB file of the peptide alone
 - Input file to create an index file (usally gro file)
 - Trajectory file of your production run, preferably without periodic boundary conditions (.xtc)
 - Topology file of your production run in binary (.tpr)
@@ -37,7 +37,9 @@ Knowing that there is X nucleotides for the RNA and Y residues for the peptide, 
 
 **==> Third step : Calculating the average value for each minimum distance**
 
-For that, the python script will call the 'Colum_NX_NY.sh' bash script, wich extract each minimium distance of the corresponding xvg file to create a temporary file called 'Averages.txt'.
+For that, the python script will call the 'Colum_NX_NY.sh' bash script, wich extract each minimium distance of the corresponding xvg file and store it in a temporary file called 'dist_NX_PY.txt'
 The python script will then use this txt file to create a list, with which it will calculate the average minimum distance value.
+
+**==> Last step : building the contact matrix***
 
 
