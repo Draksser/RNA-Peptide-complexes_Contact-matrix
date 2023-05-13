@@ -1,4 +1,4 @@
-# RNA-Peptide-complexes_Contact-matrix
+# RNA-Peptide-complexes_Contact-matrix 
 
 This python script is designed to build a contact matrix of an RNA-peptide complex using gromacs mindist function. For this, you have to make sure that every bash script is present in your working directory.
 The scripts are : 
