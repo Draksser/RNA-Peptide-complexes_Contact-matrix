@@ -46,6 +46,12 @@ The python list containing each average minimumm distance value will be converte
 
 # RNA-Peptide-complexes_RMSD_calculations
 
-The second python script calculates 5 different RMSDs for the RNA-peptide complex, using the initial coordinates of the peptide and the RNA with the gmx rms command.
+The second python script calculates 5 different RMSDs for the RNA-peptide complex, using the initial coordinates of the peptide and the RNA with the gmx rms command. It will first create an index file with the gmx make_ndx command, containing the RNA, peptide, and complex group of atoms. The RMSD calculated with this scripts are :
+- Peptide fit to peptide
+- RNA fit to RNA
+- Peptide fit to RNA
+- RNA fit to peptide
+- Complex fit to complex
+The script will then call a bash script called 'add_label_rmsd.sh', that concatenate the 5 files to one xvg file, showing every RMSD on the same graph.
 
 
